@@ -1,0 +1,14 @@
+[Unit]
+Description=5arc
+After=network.target
+
+[Service]
+User=str
+Group=str
+
+WorkingDirectory=/home/str/5arc/
+Environment="PYTHONPATH=/home/str/5arc/"
+ExecStart=/home/str/5arc/.venv/bin/python /home/str/5arc/bot_main.py
+
+[Install]
+WantedBy=multi-user.target
